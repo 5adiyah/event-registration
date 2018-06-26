@@ -15,4 +15,6 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-//change username
+Rout::get('/events', function() {
+  return view('events');
+})
