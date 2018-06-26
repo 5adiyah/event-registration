@@ -19,5 +19,5 @@ Route::get('/events', function() {
 
   $events = DB::table('events')->get();
 
-  return $events;
+  return view('events', compact('events'));
 });

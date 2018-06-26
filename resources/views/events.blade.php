@@ -6,7 +6,10 @@
   </head>
   <body>
     <h1>Past Events:</h1>
-    
+
+    @foreach ($events as $event)
+      <li>{{ $event->title }}</li>
+    @endforeach
 
   </body>
 </html>
