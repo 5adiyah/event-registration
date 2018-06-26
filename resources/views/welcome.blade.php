@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">Past Events</a>
+                    <a href="events">Past Events</a>
                     <a href="#">Current Event</a>
                     <a href="#">Future Events</a>
                 </div>
