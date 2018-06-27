@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/events', function() {
 
-  $events = DB::table('events')->get();
+  $events = App\Event::all();
 
   return view('events.index', compact('events'));
 });
