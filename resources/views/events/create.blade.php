@@ -5,7 +5,7 @@
 
     <h3>Create An Event</h3>
 
-    <form>
+    <form method="POST" action="/events">
       <label for="eventName">Event Name</label>
       <input class="u-full-width" type="text" id="eventName" name="eventName">
 
