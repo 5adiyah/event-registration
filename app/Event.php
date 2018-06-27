@@ -13,5 +13,8 @@ class Event extends Model
     public function scopeCurrentEvent($query){
       return $query->where('eventStatus', 'current');
     }
-  
+
+    public function scopeFutureEvent($query){
+      return $query->where('eventStatus', 'future');
+    }
 }
