@@ -15,20 +15,6 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-// Route::get('/events', function() {
-//
-//   $events = App\Event::all();
-//
-//   return view('events.index', compact('events'));
-// });
-//
-// Route::get('/events/{event}', function($id) {
-//
-//   $event = App\Event::find($id);
-//
-//   return view('events.show', compact('event'));
-// });
-
 Route::get('/past-events', function() {
 
   $events = App\Event::PastEvent()->get();
