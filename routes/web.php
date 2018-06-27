@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::get('/events', 'EventsController@index');
 
+
 Route::get('/past-events', function() {
 
   $events = App\Event::PastEvent()->get();

@@ -83,9 +83,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="events">View Events</a>
-                    <a href="#">View Calendar</a>
-                    <a href="#">Contact Us</a>
+                    <a href="past-events">Past Events</a>
+                    <a href="current-events">Current Event</a>
+                    <a href="future-events">Future Events</a>
                 </div>
             </div>
         </div>
