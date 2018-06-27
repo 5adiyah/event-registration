@@ -11,14 +11,7 @@ class TicketsController extends Controller
 {
 
     public function store(Event $event){
-      //Create a new event using the request data
-      $ticket = new Ticket;
-      $ticket->type = request('type');
-      $ticket->event_id = $event->id;
-      $ticket->price = request('price');
-      //Save it to the Database
-      $ticket->save();
-      //Redirect to the events page
+      $event->addTicket(request('type'), request('price'));
       return back();
     }
 

@@ -10,6 +10,17 @@ class Event extends Model
       return $this->hasMany(Ticket::class);
     }
 
+    public function addTicket($type, $price){
+      //Create a new event using the request data
+      $ticket = new Ticket;
+      $ticket->type = request('type');
+      $ticket->event_id = $this->id;
+      $ticket->price = request('price');
+      //Save it to the Database
+      $ticket->save();
+      //Redirect to the events page
+    }
+
     public function scopePastEvent($query){
       return $query->where('eventStatus', 'past');
     }
