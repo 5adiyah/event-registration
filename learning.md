@@ -18,7 +18,7 @@
   - Create a Controller
   - Move application logic out of the route and into the Controller
   - Use Route Model Binding to access instances of an Event
-  - Create a layouts file
+  - Create a layouts file and connect to other layouts plus css file
 
 
 **BUGS**
