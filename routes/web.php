@@ -29,7 +29,7 @@ Route::get('/', function () {
 //   return view('events.show', compact('event'));
 // });
 
-Route::get('/events', function() {
+Route::get('/past-events', function() {
 
   $events = App\Event::PastEvent()->get();
 
