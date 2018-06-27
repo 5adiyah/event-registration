@@ -9,4 +9,9 @@ class Event extends Model
     public function scopePastEvent($query){
       return $query->where('eventStatus', 'past');
     }
+
+    public function scopeCurrentEvent($query){
+      return $query->where('eventStatus', 'current');
+    }
+  
 }
