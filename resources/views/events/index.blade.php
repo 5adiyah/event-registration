@@ -8,8 +8,13 @@
     <h1>Past Events:</h1>
 
     @foreach ($events as $event)
-      <li>{{ $event->title }}</li>
+      <li>
+        <a href="/events/{{ $event->id }}">
+          {{ $event->title }}
+        </a>
+      </li>
     @endforeach
 
+{{-- paused at 6:13 --}}
   </body>
 </html>
