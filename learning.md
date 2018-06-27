@@ -31,3 +31,5 @@
 
   - `php artisan migrate` --> SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = registrationapp and table_name = migrations)
     - *FIX* - Delete migration file and run `php artisan migrate`
+
+  - Css not showing up --> `<link href="{{URL::asset('css/styles.css')}}" rel="stylesheet">`

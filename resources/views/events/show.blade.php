@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>{{ $event->title }}</h1>
-  </body>
-</html>
+@extends('layouts.master')
+
+@section('content')
+
+  <div class="container">
+
+    <h3>{{ $event->title }}</h3>
+
+  </div>
+
+@endsection

@@ -19,6 +19,10 @@ class EventsController extends Controller
       return view('events.show', compact('event'));
     }
 
+    public function create(){
+      return view('events.create');
+    }
+
     public function pastEvents(){
       $events = Event::PastEvent()->get();
       return view('events.pastEvents', compact('events'));

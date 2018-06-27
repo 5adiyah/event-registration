@@ -2,7 +2,7 @@ html, body {
     background-color: #fff;
     color: #636b6f;
     font-family: 'Raleway', sans-serif;
-    font-weight: 100;
+    font-weight: lighter;
     height: 100vh;
     margin: 0;
 }
@@ -33,6 +33,7 @@ html, body {
 
 .title {
     font-size: 84px;
+    font-weight: 400;
 }
 
 .links > a {
@@ -47,4 +48,13 @@ html, body {
 
 .m-b-md {
     margin-bottom: 30px;
+}
+
+h3{
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.container{
+  padding-top: 100px;
 }

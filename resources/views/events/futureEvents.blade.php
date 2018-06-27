@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Future Events:</h1>
+@extends('layouts.master')
+
+@section('content')
+
+  <div class="container">
+
+    <h3>Future Events:</h3>
 
     @foreach ($events as $event)
       <li>
@@ -15,6 +14,6 @@
       </li>
     @endforeach
 
-{{-- paused at 6:13 --}}
-  </body>
-</html>
+  </div>
+
+@endsection
