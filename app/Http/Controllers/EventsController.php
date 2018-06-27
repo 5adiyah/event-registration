@@ -15,4 +15,9 @@ class EventsController extends Controller
       $event = Event::find($id);
       return view('events.show', compact('event'));
     }
+
+    public function pastEvents(){
+      $events = Event::PastEvent()->get();
+      return view('events.pastEvents', compact('events'));
+    }
 }
