@@ -1,9 +1,6 @@
 <?php
 
-Route::get('/', function () {
-  return view('welcome');
-});
-
+Route::get('/', 'EventsController@home');
 Route::get('/events', 'EventsController@index');
 Route::get('events/{event}', 'EventsController@show');
 Route::get('/past-events', 'EventsController@pastEvents');
