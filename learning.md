@@ -19,6 +19,8 @@
   - Move application logic out of the route and into the Controller
   - Use Route Model Binding to access instances of an Event
   - Create a layouts file and connect to other layouts plus css file
+  - When creating forms, you have to add `{{ csrf_field() }}` to protect your data
+
 
 
 **BUGS**
@@ -33,3 +35,7 @@
     - *FIX* - Delete migration file and run `php artisan migrate`
 
   - Css not showing up --> `<link href="{{URL::asset('css/styles.css')}}" rel="stylesheet">`
+
+**Debugging**
+
+  - `dd(request()->all());` kind of like console.log

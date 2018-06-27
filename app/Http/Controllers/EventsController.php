@@ -24,7 +24,14 @@ class EventsController extends Controller
     }
 
     public function store(){
-      
+      //Create a new event using the request data
+      $event = new Event;
+      $event->title = request('title');
+      $event->eventStatus = request('eventStatus');
+      //Save it to the Database
+      $event->save();
+      //Redirect to the events page
+      return redirect('/events');
     }
 
     public function pastEvents(){

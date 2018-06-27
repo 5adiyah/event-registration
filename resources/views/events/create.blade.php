@@ -6,8 +6,9 @@
     <h3>Create An Event</h3>
 
     <form method="POST" action="/events">
-      <label for="eventName">Event Name</label>
-      <input class="u-full-width" type="text" id="eventName" name="eventName">
+      {{ csrf_field() }}
+      <label for="title">Event Name</label>
+      <input class="u-full-width" type="text" id="title" name="title">
 
       <label for="eventStatus">Event Type</label>
       <input class="u-full-width" type="text" id="eventStatus" name="eventStatus">
