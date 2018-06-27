@@ -11,3 +11,4 @@ Route::get('/current-events', 'EventsController@currentEvents');
 Route::get('/future-events', 'EventsController@futureEvents');
 
 Route::post('/events', 'EventsController@store');
+Route::post('/events/{event}/tickets', 'TicketsController@store');
