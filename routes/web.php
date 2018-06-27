@@ -15,11 +15,25 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+// Route::get('/events', function() {
+//
+//   $events = App\Event::all();
+//
+//   return view('events.index', compact('events'));
+// });
+//
+// Route::get('/events/{event}', function($id) {
+//
+//   $event = App\Event::find($id);
+//
+//   return view('events.show', compact('event'));
+// });
+
 Route::get('/events', function() {
 
-  $events = App\Event::all();
+  $events = App\Event::PastEvent()->get();
 
-  return view('events.index', compact('events'));
+  return view('events.pastEvents', compact('events'));
 });
 
 Route::get('/events/{event}', function($id) {
