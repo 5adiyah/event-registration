@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('/events', 'EventsController@index');
+Route::get('events/{event}', 'EventsController@show');
+
+
 
 
 Route::get('/past-events', function() {
@@ -37,11 +40,4 @@ Route::get('/future-events', function() {
   $events = App\Event::FutureEvent()->get();
 
   return view('events.futureEvents', compact('events'));
-});
-
-Route::get('/events/{event}', function($id) {
-
-  $event = App\Event::find($id);
-
-  return view('events.show', compact('event'));
 });
