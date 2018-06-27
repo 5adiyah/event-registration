@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('/events', 'EventsController@index');
 Route::get('events/{event}', 'EventsController@show');
 Route::get('/past-events', 'EventsController@pastEvents');
-
+Route::get('/current-events', 'EventsController@currentEvents');
 
 Route::get('/current-events', function() {
 
