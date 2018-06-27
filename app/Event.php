@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
+    public function tickets(){
+      return $this->hasMany(Ticket::class);
+    }
+
     public function scopePastEvent($query){
       return $query->where('eventStatus', 'past');
     }
