@@ -20,9 +20,14 @@ class EventsController extends Controller
       $events = Event::PastEvent()->get();
       return view('events.pastEvents', compact('events'));
     }
-    
+
     public function currentEvents(){
       $events = Event::CurrentEvent()->get();
       return view('events.currentEvents', compact('events'));
+    }
+
+    public function futureEvents(){
+      $events = Event::FutureEvent()->get();
+      return view('events.futureEvents', compact('events'));
     }
 }
