@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <h1>Past Events:</h1>
+    <h1>Current Events:</h1>
 
     @foreach ($events as $event)
       <li>
