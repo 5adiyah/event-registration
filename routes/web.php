@@ -43,6 +43,13 @@ Route::get('/current-events', function() {
   return view('events.currentEvents', compact('events'));
 });
 
+Route::get('/future-events', function() {
+
+  $events = App\Event::FutureEvent()->get();
+
+  return view('events.futureEvents', compact('events'));
+});
+
 Route::get('/events/{event}', function($id) {
 
   $event = App\Event::find($id);
