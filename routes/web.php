@@ -24,7 +24,7 @@ Route::get('/events', function() {
 
 Route::get('/events/{event}', function($id) {
 
-  $event = DB::table('events')->find($id);
+  $event = App\Event::find($id);
 
   return view('events.show', compact('event'));
 });
