@@ -8,7 +8,9 @@
 
     <div class="tickets">
       @foreach ($event->tickets as $ticket)
-        <li>{{ $ticket->type }} Ticket: ${{ $ticket->price }}</li>
+        <li>
+          <a href="/events/{{ $event->id }}/tickets/{{ $ticket->id }}">{{ $ticket->type }} Ticket: ${{ $ticket->price }}</a>
+        </li>
       @endforeach
     </div>
 

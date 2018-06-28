@@ -21,10 +21,10 @@
   - Create a layouts file and connect to other layouts plus css file
   - When creating forms, you have to add `{{ csrf_field() }}` to protect your data
 
-**ECOMMERCE RESEARCH**
-  - Look up Laravel Cashier
-  - Look up cartalyst
-  - Look up OpenCart
+**ECOMMERCE RESEARCH - STRIPE**
+  - Take form from stipe and POST to an action?
+  - You'll need a data-key from your stripe account
+
 
 
 **BUGS**
