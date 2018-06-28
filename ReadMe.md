@@ -21,9 +21,16 @@
   - Create a layouts file and connect to other layouts plus css file
   - When creating forms, you have to add `{{ csrf_field() }}` to protect your data
 
-**ECOMMERCE RESEARCH - STRIPE**
-  - Take form from stipe and POST to an action?
-  - You'll need a data-key from your stripe account
+**ECOMMERCE - STRIPE:**
+  - Add the checkout form to templates
+  - Create a Payments Controller
+  - Composer require stripe/stripe-php
+  - Set your api key
+    - Grab api key from stripe dashboard
+    - In your env file add a `STRIPE_KEY` and `STRIPE_KEY`
+    
+  - Create a customer
+  - Charge their card
 
 
 

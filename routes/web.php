@@ -13,3 +13,6 @@ Route::get('/events/{event}/tickets/{ticket}', 'TicketsController@show');
 Route::get('/past-events', 'EventsController@pastEvents');
 Route::get('/current-events', 'EventsController@currentEvents');
 Route::get('/future-events', 'EventsController@futureEvents');
+
+Route::get('/pay', 'EventsController@payment');
+Route::POST('/payments', 'PaymentsController@store');

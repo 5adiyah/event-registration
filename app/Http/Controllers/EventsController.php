@@ -49,4 +49,8 @@ class EventsController extends Controller
       $events = Event::FutureEvent()->get();
       return view('events.futureEvents', compact('events'));
     }
+
+    public function payment(){
+      return view('paymentForm');
+    }
 }

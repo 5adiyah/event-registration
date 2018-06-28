@@ -14,7 +14,7 @@
     <link href="{{URL::asset('css/styles.css')}}" rel="stylesheet">
   </head>
   <body>
-    
+
       @yield('content')
 
   </body>
