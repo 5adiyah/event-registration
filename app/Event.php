@@ -14,11 +14,10 @@ class Event extends Model
       //Create a new event using the request data
       $ticket = new Ticket;
       $ticket->type = request('type');
-      $ticket->event_id = $this->id;
       $ticket->price = request('price');
+      $ticket->event_id = $this->id; //relate this event to the ticket
       //Save it to the Database
       $ticket->save();
-      //Redirect to the events page
     }
 
     public function scopePastEvent($query){

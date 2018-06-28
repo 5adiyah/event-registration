@@ -14,6 +14,7 @@
       </li>
     @endforeach
 
+    <a href="events/create"><input class="button-primary" type="button" value="Create Event"></a>
   </div>
 
 @endsection

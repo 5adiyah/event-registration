@@ -11,7 +11,7 @@ class TicketsController extends Controller
 {
 
     public function store(Event $event){
-      $event->addTicket(request('type'), request('price'));
+      $event->addTicket(request('type'), request('price')); //This is in Event Model
       return back();
     }
 
