@@ -10,7 +10,7 @@
       {{ csrf_field() }}
       <script
         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="pk_test_Sw4HIZ1k0h5TZ73iegpLMK6m"
+        data-key="{{ config('services.stripe.key') }}"
         data-amount="2500"
         data-name="Event Ticket"
         data-description="Buy and event ticket"
