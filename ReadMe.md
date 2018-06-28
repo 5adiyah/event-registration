@@ -30,8 +30,8 @@
     - In your env file add a `STRIPE_KEY` and `STRIPE_KEY`
     - grab it by `config('services.stripe.key')` --> config, give me the services file, and the stripe key
     - in the form, inside of data-key change to `{{ config('services.stripe.key') }}`
-  - Create a customer
-  - Charge their card
+  - Create a customer in Payments Controller
+  - Charge their card in Payments Controller
 
 
 
