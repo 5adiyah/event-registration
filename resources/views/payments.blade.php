@@ -4,7 +4,7 @@
   <div class="flex-center full-height">
     <div class="content">
         <div class="title m-b-md">
-            Payment Page
+            Payment Complete!
         </div>
 
     </div>
