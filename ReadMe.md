@@ -33,8 +33,6 @@
   - Create a customer in Payments Controller
   - Charge their card in Payments Controller
 
-
-
 **BUGS**
 
   - Valet returns unknown host
@@ -51,3 +49,7 @@
 **Debugging**
 
   - `dd(request()->all());` kind of like console.log
+
+**What the heck is that?**
+  - *csrf_field* - cross site request forgery, type of malicious exploit where unauthorized commands are preformed on behalf of the user, Laravel makes you use a `csrf_field` inside of your forms to protect you from that
+  - *migrations* - they're like version control for your database, it makes it easy to modify your database schema. 
