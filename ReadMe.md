@@ -21,6 +21,10 @@
   - Create a layouts file and connect to other layouts plus css file
   - When creating forms, you have to add `{{ csrf_field() }}` to protect your data
 
+**ECOMMERCE RESEARCH**
+  - Look up Laravel Cashier
+  - Look up cartalyst
+  - Look up OpenCart
 
 
 **BUGS**
