@@ -16,7 +16,7 @@
     - create database databaseName
     - use databaseName
     - Update the `.env` file with the database name, username and pw
-    - `php artisan make:migration name_of_migration --create-tableName`
+    - `php artisan make:migration name_of_migration --create=tableName`
     - Add table columns in the migration file
     - `php artisan migrate`
     - If you make any changes to your table columns in the migration file:
