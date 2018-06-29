@@ -9,6 +9,7 @@ use App\Ticket;
 
 class OrderController extends Controller
 {
+
   public function store(Ticket $ticket){
     $ticket->addOrder(
       request('quantity'),
@@ -18,6 +19,12 @@ class OrderController extends Controller
       request('phoneNumber'),
       request('allergies')
     ); //This is in Ticket Model
-    return back();
+    return view('paymentForm');
   }
+
+  public function checkout(){
+    dd(request());
+    return view('payments');
+  }
+
 }

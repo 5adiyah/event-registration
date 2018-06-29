@@ -36,7 +36,7 @@
 
     </form>
 
-    <a href="/tickets/{{ $ticket->id }}/buy"><input class="button-primary" type="button" value="Get Ticket"></a>
+    {{-- <a href="/tickets/{{ $ticket->id }}/buy"><input class="button-primary" type="button" value="Get Ticket"></a> --}}
 
   </div>
 

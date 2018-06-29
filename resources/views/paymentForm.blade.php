@@ -4,6 +4,25 @@
 
   <div class="container">
 
+    <form action="/tickets/1/checkout" method="post" id="payment-form">
+      {{ csrf_field() }}
+      <div class="form-row">
+        <label for="card-element"> Credit or debit card </label>
+        <div id="card-element">
+          <!-- A Stripe Element will be inserted here. -->
+        </div>
+
+        <!-- Used to display Element errors. -->
+        <div id="card-errors" role="alert"></div>
+      </div>
+
+      <button class="button-primary">Submit Payment</button>
+    </form>
+
+  </div>
+
+  {{-- <div class="container">
+
     <h3>PURCHASE TICKET</h3>
 
     <form action="/payments" method="POST" id="payForm">
@@ -40,6 +59,8 @@
       })
     </script>
 
-  </div>
+  </div> --}}
+
+  <script src="{{URL::asset('js/stripe.js')}}"></script>
 
 @endsection
