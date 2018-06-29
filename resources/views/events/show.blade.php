@@ -2,9 +2,20 @@
 
 @section('content')
 
-  <div class="container">
+  <div class="eventContainer">
+    <h3>{{ $event->title }}</h3> <hr>
+    <div class="eventFlyer">
+      <img src="{{ $event->imageUrl }}">
+    </div>
+    <div class="eventDetails">
+      <p>Start Date: {{ $event->startDate }}</p>
+      <p>End Date: {{ $event->endDate }}</p>
+      <p>Location: {{ $event->location }}</p>
+      <p>{{ $event->description }}</p>
+    </div>
+  </div>
 
-    <h3>{{ $event->title }}</h3>
+  <div class="container">
 
     <div class="tickets">
       @foreach ($event->tickets as $ticket)

@@ -29,6 +29,11 @@ class EventsController extends Controller
       $event = new Event;
       $event->title = request('title');
       $event->eventStatus = request('eventStatus');
+      $event->startDate = request('startDate');
+      $event->endDate = request('endDate');
+      $event->location = request('location');
+      $event->imageUrl = request('imageUrl');
+      $event->description = request('description');
       //Save it to the Database
       $event->save();
       //Redirect to the events page

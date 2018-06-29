@@ -14,10 +14,10 @@
       <input class="u-full-width" type="text" id="eventStatus" name="eventStatus">
 
       <label for="startDate">Start Date</label>
-      <input class="u-full-width" type="text" id="startDate" name="startDate">
+      <input class="u-full-width" type="date" id="startDate" name="startDate">
 
       <label for="endDate">End Date</label>
-      <input class="u-full-width" type="text" id="endDate" name="endDate">
+      <input class="u-full-width" type="date" id="endDate" name="endDate">
 
       <label for="location">Event Location</label>
       <input class="u-full-width" type="text" id="location" name="location">
