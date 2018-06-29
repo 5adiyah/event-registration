@@ -30,6 +30,7 @@ class PaymentsController extends Controller {
         'currency' => 'usd'
       ]);
 
+      return view('payments');
     }
 
 

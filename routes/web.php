@@ -14,7 +14,7 @@ Route::get('/past-events', 'EventsController@pastEvents');
 Route::get('/current-events', 'EventsController@currentEvents');
 Route::get('/future-events', 'EventsController@futureEvents');
 
-Route::get('/pay', 'EventsController@payment');
+Route::get('/tickets/{ticket}/buy', 'EventsController@payment');
 
 Route::get('/payments', 'PaymentsController@home');
 Route::POST('/payments', 'PaymentsController@store');

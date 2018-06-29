@@ -6,7 +6,7 @@
 
     <h3>{{ $ticket->type }} Ticket: ${{ $ticket->price }}</h3>
 
-    <a href="#"><input class="button-primary" type="button" value="Buy Ticket"></a>
+    <a href="/tickets/{{ $ticket->id }}/buy"><input class="button-primary" type="button" value="Buy Ticket"></a>
 
   </div>
 
