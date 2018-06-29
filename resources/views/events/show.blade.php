@@ -8,9 +8,9 @@
       <img src="{{ $event->imageUrl }}">
     </div>
     <div class="eventDetails">
-      <p>Start Date: {{ $event->startDate }}</p>
-      <p>End Date: {{ $event->endDate }}</p>
-      <p>Location: {{ $event->location }}</p>
+      <p><strong>Start Date:</strong> {{ $event->startDate }}</p>
+      <p><strong>End Date:</strong> {{ $event->endDate }}</p>
+      <p><strong>Location:</strong> {{ $event->location }}</p>
       <p>{{ $event->description }}</p>
     </div>
   </div>
