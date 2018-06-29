@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Event;
 use App\Ticket;
+use Stripe;
 
 class OrderController extends Controller
 {
@@ -23,8 +24,26 @@ class OrderController extends Controller
   }
 
   public function checkout(){
-    dd(request());
-    return view('payments');
+    try{
+      $charge = Stripe::charges()->create([
+        'amount' => 20,
+        'currency' => 'USD',
+        'source' => request('stripeToken'),
+        'description' => 'Purchase a ticket',
+        'receipt_email' => request('email'),
+        'metadata' => [
+          'data1' => 'metadata 1',
+          'data2' => 'metadata 2',
+          'data3' => 'metadata 3',
+        ],
+      ]);
+
+      return view('payments');
+    } catch(Exception $e){
+      
+    }
+
+
   }
 
 }

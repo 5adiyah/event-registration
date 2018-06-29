@@ -42,6 +42,10 @@
   - Create a customer in Payments Controller
   - Charge their card in Payments Controller
 
+*Stripe-Laravel from Cartalys*
+  - `Cartalyst\Stripe\Laravel\StripeServiceProvider::class,` --> goes in config/app.php in the $providers array
+  - `'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,` --> goes in config/app.php in the $aliases array
+
 **BUGS**
 
   - Valet returns unknown host
