@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Stripe\{Stripe, Charge, Customer};
 
+use App\Ticket;
+
 class PaymentsController extends Controller {
 
     public function home(){
@@ -26,7 +28,7 @@ class PaymentsController extends Controller {
       //Create a Charge
       Charge::create([
         'customer' => $customer->id,
-        'amount' => 3500,
+        'amount' => $ticket->price,
         'currency' => 'usd'
       ]);
 

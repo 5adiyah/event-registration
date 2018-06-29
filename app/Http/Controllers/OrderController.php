@@ -23,7 +23,7 @@ class OrderController extends Controller
 
     try{
       $charge = Stripe::charges()->create([
-        'amount' => 2000,
+        'amount' => $ticket->price,
         'currency' => 'USD',
         'source' => request('stripeToken'),
         'description' => 'Purchase a ticket',
@@ -37,7 +37,7 @@ class OrderController extends Controller
 
       return view('payments');
     } catch(Exception $e){}
-      
+
   }
 
 }
