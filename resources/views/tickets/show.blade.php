@@ -6,7 +6,7 @@
 
     <h3>{{ $ticket->type }} Ticket: ${{ $ticket->price }}</h3>
 
-    <form method="POST" action="/tickets/{{ $ticket->id }}/buy">
+    <form method="POST" id="payment-form" action="/tickets/{{ $ticket->id }}/buy">
       {{ csrf_field() }}
       <label for="quantity">Quantity</label>
       <select class="u-full-width" id="quantity" name="quantity" placeholder="How many tickets?">
@@ -32,11 +32,21 @@
       <label for="allergies">Allergies</label>
       <input class="u-full-width" type="text" id="allergies" name="allergies">
 
-      <input class="button-primary" type="submit" value="Continue to Payment">
+      <div class="form-row">
+        <label for="card-element"> Credit or debit card </label>
+        <div id="card-element">
+          <!-- A Stripe Element will be inserted here. -->
+        </div>
+
+        <!-- Used to display Element errors. -->
+        <div id="card-errors" role="alert"></div>
+      </div>
+
+      <input class="button-primary" type="submit" value="Submit Payment">
 
     </form>
 
-    {{-- <a href="/tickets/{{ $ticket->id }}/buy"><input class="button-primary" type="button" value="Get Ticket"></a> --}}
+    <script src="{{URL::asset('js/stripe.js')}}"></script>
 
   </div>
 

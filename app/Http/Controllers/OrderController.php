@@ -20,13 +20,10 @@ class OrderController extends Controller
       request('phoneNumber'),
       request('allergies')
     ); //This is in Ticket Model
-    return view('paymentForm');
-  }
 
-  public function checkout(){
     try{
       $charge = Stripe::charges()->create([
-        'amount' => 20,
+        'amount' => 2000,
         'currency' => 'USD',
         'source' => request('stripeToken'),
         'description' => 'Purchase a ticket',
@@ -39,11 +36,8 @@ class OrderController extends Controller
       ]);
 
       return view('payments');
-    } catch(Exception $e){
+    } catch(Exception $e){}
       
-    }
-
-
   }
 
 }

@@ -15,8 +15,7 @@ Route::get('/current-events', 'EventsController@currentEvents');
 Route::get('/future-events', 'EventsController@futureEvents');
 
 Route::get('/tickets/{ticket}/buy', 'EventsController@payment');
-Route::POST('/tickets/{ticket}/buy', 'OrderController@store'); //change this...
-Route::POST('/tickets/{ticket}/checkout', 'OrderController@checkout'); //and this to same pg
+Route::POST('/tickets/{ticket}/buy', 'OrderController@store'); //and this to same pg
 
 Route::get('/payments', 'PaymentsController@home');
 Route::POST('/payments', 'PaymentsController@store');
