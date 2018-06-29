@@ -33,7 +33,7 @@
           name: 'Event Ticket',
           description: 'Ticket to the event',
           zipCode: true,
-          amount: 2500
+          amount: 3500
         });
 
         e.preventDefault();

@@ -26,7 +26,7 @@ class PaymentsController extends Controller {
       //Create a Charge
       Charge::create([
         'customer' => $customer->id,
-        'amount' => 2500,
+        'amount' => 3500,
         'currency' => 'usd'
       ]);
 
