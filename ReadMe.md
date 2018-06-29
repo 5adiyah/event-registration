@@ -12,6 +12,15 @@
     - No idea about this one
   - Learn Basic Routing and Views
   - Set up Database and Tables
+    - `mysql -uroot -p`
+    - create database databaseName
+    - use databaseName
+    - Update the `.env` file with the database name, username and pw
+    - `php artisan make:migration name_of_migration --create-tableName`
+    - Add table columns in the migration file
+    - `php artisan migrate`
+    - If you make any changes to your table columns in the migration file:
+      - `php artisan migrate:refresh`
   - Pass data to my Views
   - Use Query Builder to access and query Database
   - Use Eloquent 101 instead of Query Builder for **Active Record Implementation**
