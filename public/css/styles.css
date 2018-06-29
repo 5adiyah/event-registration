@@ -58,3 +58,7 @@ h3{
 .container{
   padding-top: 100px;
 }
+
+#description{
+  min-height: 300px;
+}
