@@ -4,15 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
     "content-hash": "e289510256c3be3c7d5442df77b56201",
-=======
-    "content-hash": "994d544aad856c54280e0c6bee6efbbb",
->>>>>>> admin
-=======
-    "content-hash": "e289510256c3be3c7d5442df77b56201",
->>>>>>> 3e5aef110fc4458861e350344e8a356e0cba5533
     "packages": [
         {
             "name": "cartalyst/collections",
