@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Ticket;
 
 class EventsController extends Controller
 {
@@ -28,6 +29,11 @@ class EventsController extends Controller
       $event = new Event;
       $event->title = request('title');
       $event->eventStatus = request('eventStatus');
+      $event->startDate = request('startDate');
+      $event->endDate = request('endDate');
+      $event->location = request('location');
+      $event->imageUrl = request('imageUrl');
+      $event->description = request('description');
       //Save it to the Database
       $event->save();
       //Redirect to the events page
@@ -47,5 +53,9 @@ class EventsController extends Controller
     public function futureEvents(){
       $events = Event::FutureEvent()->get();
       return view('events.futureEvents', compact('events'));
+    }
+
+    public function payment(){
+      return view('paymentForm');
     }
 }

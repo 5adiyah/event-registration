@@ -11,7 +11,7 @@ class Event extends Model
     }
 
     public function addTicket($type, $price){
-      //Create a new event using the request data
+      //Create a new ticket using the request data
       $ticket = new Ticket;
       $ticket->type = request('type');
       $ticket->price = request('price');

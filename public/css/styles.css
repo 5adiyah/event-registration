@@ -58,3 +58,34 @@ h3{
 .container{
   padding-top: 100px;
 }
+
+#description{
+  min-height: 300px;
+}
+
+input[type="date"]{
+  height: 38px;
+}
+
+/* Events Page */
+
+.eventContainer{
+  width: 95%;
+  margin: 0 auto -50px auto;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.eventFlyer{
+  grid-column: 1 / 2;
+}
+
+.eventFlyer img{
+  width: 100%;
+}
+
+.eventDetails{
+  grid-column: 2 / 3;
+  padding: 30px;
+}

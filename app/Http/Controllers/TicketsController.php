@@ -15,4 +15,8 @@ class TicketsController extends Controller
       return back();
     }
 
+    public function show(Event $event, Ticket $ticket){
+      return view('tickets.show', compact('ticket'));
+    }
+
 }

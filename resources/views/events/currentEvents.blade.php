@@ -8,9 +8,7 @@
 
     @foreach ($events as $event)
       <li>
-        <a href="/events/{{ $event->id }}">
-          {{ $event->title }}
-        </a>
+        <a href="/events/{{ $event->id }}">{{ $event->title }}</a>
       </li>
     @endforeach
 
