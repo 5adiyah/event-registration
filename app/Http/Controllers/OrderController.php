@@ -21,9 +21,11 @@ class OrderController extends Controller
       request('allergies')
     ); //This is in Ticket Model
 
+    $amount = (request('quantity'))*($ticket->price);
     try{
       $charge = Stripe::charges()->create([
-        'amount' => $ticket->price,
+        'amount' => $amount,
+        // 'amount' => $ticket->price,
         'currency' => 'USD',
         'source' => request('stripeToken'),
         'description' => 'Purchase a ticket',
