@@ -19,3 +19,8 @@ Route::POST('/tickets/{ticket}/buy', 'OrderController@store'); //and this to sam
 
 Route::get('/payments', 'PaymentsController@home');
 Route::POST('/payments', 'PaymentsController@store');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
