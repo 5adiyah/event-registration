@@ -12,7 +12,7 @@
     - No idea about this one
   - Learn Basic Routing and Views
   - Set up Database and Tables
-    - `mysql -uroot -p`
+    - `mysql -u root -p`
     - create database databaseName
     - use databaseName
     - Update the `.env` file with the database name, username and pw
