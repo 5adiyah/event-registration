@@ -47,7 +47,8 @@ return [
     */
 
     'models' => [
-        //'namespace' => 'App\\',
+        'namespace' => 'App\\',
+        'event' => 'App\Event'
     ],
 
     /*

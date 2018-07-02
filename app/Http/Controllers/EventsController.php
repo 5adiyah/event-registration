@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+// use puplic\vendor\TCG\Voyager\Models\Event;
 use App\Ticket;
 
 class EventsController extends Controller
