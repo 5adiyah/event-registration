@@ -15,7 +15,10 @@ class CreateCalUsersTable extends Migration
     {
         Schema::create('cal_users', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('email');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->text('token');
         });
     }
 
