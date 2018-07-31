@@ -1,10 +1,8 @@
 <?php
 namespace App;
+class Googl {
 
-class Googl
-{
-    public function client()
-    {
+    public function client(){
         $client = new \Google_Client();
         $client->setClientId(env('GOOGLE_CLIENT_ID'));
         $client->setClientSecret(env('GOOGLE_CLIENT_SECRET'));

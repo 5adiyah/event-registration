@@ -30,6 +30,7 @@ Route::group(
 
     function(){
         Route::get('/dashboard', 'CalendarsController@index');
+
         Route::get('/calendar/create', 'CalendarsController@createCalendar');
         Route::post('/calendar/create', 'CalendarsController@doCreateCalendar');
 

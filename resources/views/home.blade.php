@@ -9,7 +9,7 @@
 
         <div class="links">
             <a href="events">View Events</a>
-            <a href="/login">View Calendar</a>
+            <a href="dashboard">View Calendar</a>
             <a href="#">Contact Us</a>
         </div>
     </div>
