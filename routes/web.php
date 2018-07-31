@@ -24,3 +24,25 @@ Route::POST('/payments', 'PaymentsController@store');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::group(
+    ['middleware' => ['admin']],
+
+    function(){
+        Route::get('/dashboard', 'CalendarsController@index');
+        Route::get('/calendar/create', 'CalendarsController@createCalendar');
+        Route::post('/calendar/create', 'CalendarsController@doCreateCalendar');
+
+        Route::get('/event/create', 'CalendarsController@createEvent');
+        Route::post('/event/create', 'CalendarsController@doCreateEvent');
+
+        Route::get('/calendar/sync', 'CalendarsController@syncCalendar');
+        Route::post('/calendar/sync', 'CalendarsController@doSyncCalendar');
+
+        Route::get('/calendar-events', 'CalendarsController@listEvents');
+
+        Route::get('/logout', 'CalendarsController@logout');
+    }
+);
+
+Route::get('/login', 'EventsController@login');
