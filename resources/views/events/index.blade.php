@@ -15,6 +15,5 @@
       </li>
     @endforeach
 
-{{-- paused at 6:13 --}}
   </body>
 </html>

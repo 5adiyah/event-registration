@@ -12,6 +12,15 @@
     - No idea about this one
   - Learn Basic Routing and Views
   - Set up Database and Tables
+    - `mysql -u root -p`
+    - create database databaseName
+    - use databaseName
+    - Update the `.env` file with the database name, username and pw
+    - `php artisan make:migration name_of_migration --create=tableName`
+    - Add table columns in the migration file
+    - `php artisan migrate`
+    - If you make any changes to your table columns in the migration file:
+      - `php artisan migrate:refresh`
   - Pass data to my Views
   - Use Query Builder to access and query Database
   - Use Eloquent 101 instead of Query Builder for **Active Record Implementation**
@@ -21,11 +30,21 @@
   - Create a layouts file and connect to other layouts plus css file
   - When creating forms, you have to add `{{ csrf_field() }}` to protect your data
 
-**ECOMMERCE RESEARCH - STRIPE**
-  - Take form from stipe and POST to an action?
-  - You'll need a data-key from your stripe account
+**ECOMMERCE - STRIPE:**
+  - Add the checkout form to templates
+  - Create a Payments Controller
+  - Composer require stripe/stripe-php
+  - Set your api key
+    - Grab api key from stripe dashboard
+    - In your env file add a `STRIPE_KEY` and `STRIPE_KEY`
+    - grab it by `config('services.stripe.key')` --> config, give me the services file, and the stripe key
+    - in the form, inside of data-key change to `{{ config('services.stripe.key') }}`
+  - Create a customer in Payments Controller
+  - Charge their card in Payments Controller
 
-
+*Stripe-Laravel from Cartalys*
+  - `Cartalyst\Stripe\Laravel\StripeServiceProvider::class,` --> goes in config/app.php in the $providers array
+  - `'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,` --> goes in config/app.php in the $aliases array
 
 **BUGS**
 
@@ -43,3 +62,7 @@
 **Debugging**
 
   - `dd(request()->all());` kind of like console.log
+
+**What the heck is that?**
+  - *csrf_field* - cross site request forgery, type of malicious exploit where unauthorized commands are preformed on behalf of the user, Laravel makes you use a `csrf_field` inside of your forms to protect you from that
+  - *migrations* - they're like version control for your database, it makes it easy to modify your database schema.
