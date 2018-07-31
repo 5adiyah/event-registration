@@ -15,9 +15,12 @@ class HomeController extends Controller
     }
 
     public function login(Googl $googl, User $user, Request $request){
-        $client = $google->client();
+        //create a new instance of the Google client
+        $client = $googl->client();
 
+        //check if a code is passed in as a query parameter to the URL
         if($request->has('code')){
+            //authenticate the user with code, check why authenticate is deprecated?
             $client->authenticate($request->get('code'));
             $token = $client->getAccessToken();
 
@@ -29,6 +32,7 @@ class HomeController extends Controller
             $first_name = $google_user['name']['givenName'];
             $last_name = $google_user['name']['familyName'];
 
+            //Check if the user already exists in the database
             $has_user = $user->where('email', '=', $email)->first();
 
             if(!$has_user) {
