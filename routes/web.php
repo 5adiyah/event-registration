@@ -45,4 +45,4 @@ Route::group(
     }
 );
 
-Route::get('/login', 'HomeController@login');
+Route::get('/login', 'EventsController@login');
