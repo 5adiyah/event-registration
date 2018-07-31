@@ -62,7 +62,7 @@ class CalendarsController extends Controller
         $page_data = [
             'calendars' => $calendars
         ];
-        return view('admin.create_event', $page_data);
+        return view('calendar.create_event', $page_data);
     }
 
     public function doCreateEvent(Event $evt, Request $request)
@@ -138,7 +138,7 @@ class CalendarsController extends Controller
         $page_data = [
             'calendars' => $calendars
         ];
-        return view('admin.sync_calendar', $page_data);
+        return view('calendar.sync_calendar', $page_data);
     }
 
 
@@ -272,7 +272,7 @@ class CalendarsController extends Controller
             'events' => $events
         ];
 
-        return view('admin.events', $page_data);
+        return view('calendar.events', $page_data);
     }
 
 
