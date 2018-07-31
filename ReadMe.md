@@ -41,6 +41,21 @@
     - in the form, inside of data-key change to `{{ config('services.stripe.key') }}`
   - Create a customer in Payments Controller
   - Charge their card in Payments Controller
+  
+  **CALENDAR INTEGRATION**
+    - Composer require google/apiclient
+    - Add following to .env file
+        APP_TITLE=Kalendaryo
+        APP_TIMEZONE="Asia/Manila"
+        
+        GOOGLE_CLIENT_ID="YOUR GOOGLE CLIENT ID"
+        GOOGLE_CLIENT_SECRET="YOUR GOOGLE CLIENT SECRET"
+        GOOGLE_REDIRECT_URL="http://kalendaryo.dev/login"
+        GOOGLE_SCOPES="email,profile,https://www.googleapis.com/auth/calendar"
+        GOOGLE_APPROVAL_PROMPT="force"
+        GOOGLE_ACCESS_TYPE="offline"
+    
+   - 
 
 *Stripe-Laravel from Cartalys*
   - `Cartalyst\Stripe\Laravel\StripeServiceProvider::class,` --> goes in config/app.php in the $providers array
