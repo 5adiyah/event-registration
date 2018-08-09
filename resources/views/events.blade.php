@@ -10,14 +10,21 @@
                         $day = date('j  ', $date);
                         $month = date(' M ', $date);
                     ?>
-
-                    <img class="eventImg" src="/storage/{{ $event->imageUrl }}" alt="event image">
-                    <p class="eventDate"><?php echo $day; ?></p>
-                    <p class="eventDate"><?php echo $month; ?></p>
-                    <p class="eventName">{{ $event->title }}</p>
-                    <p class="eventName">{{ $event->location }}</p>
-                    <a href="/events/{{ $event->id }}"><button class="attendButton">Attend</button></a>
-                    <button class="detailsButton">Details</button>
+                    <div class="eventImgContainer">
+                        <img class="eventImg" src="/storage/{{ $event->imageUrl }}" alt="event image">
+                    </div>
+                    <div class="eventDetails">
+                        <div class="detailsLeft">
+                            <p class="eventDay"><?php echo $day; ?></p>
+                            <p class="eventMonth"><?php echo $month; ?></p>
+                        </div>
+                        <div class="detailsRight">
+                            <p class="eventName">{{ $event->title }}</p>
+                            <p class="eventLocation">{{ $event->location }}</p>
+                            <a href="/events/{{ $event->id }}"><button class="attendButton">Attend</button></a>
+                            <button class="detailsButton">Details</button>
+                        </div>
+                    </div>
                 </div>
             @endforeach
         </div>

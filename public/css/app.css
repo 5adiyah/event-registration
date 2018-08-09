@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Abel|Advent+Pro|Antic|Dosis|Economica|Encode+Sans+Condensed|Exo|Lato|Marvel|Montserrat|Muli|Nanum+Gothic|Noto+Sans|Nunito+Sans|Open+Sans|Open+Sans+Condensed:300|Oswald|PT+Sans|Pathway+Gothic+One|Poppins|Quicksand|Rajdhani|Raleway|Roboto|Roboto+Condensed|Source+Sans+Pro|Titillium+Web|Ubuntu);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10411,6 +10411,11 @@ a.text-dark:focus {
   }
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .navigation {
   width: 100%;
   margin: 0 auto;
@@ -10445,7 +10450,69 @@ a.text-dark:focus {
   color: #CBAD86;
 }
 
-.eventImg {
-  height: 100px;
+.greenBackground {
+  background-color: #A5AE96;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.greenBackground .content {
+  background-color: white;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.greenBackground .eventContainer {
+  height: 250px;
+}
+
+.greenBackground .eventContainer .eventImgContainer {
+  overflow: hidden;
+}
+
+.greenBackground .eventContainer .eventImgContainer .eventImg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 300px;
+  height: 108px;
+}
+
+.greenBackground .eventContainer .eventDetails {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsLeft {
+  padding-top: 20px;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsLeft .eventMonth {
+  font-size: 16px;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsLeft p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 27px;
+  color: #9B9B9B;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsRight {
+  padding-top: 20px;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsRight .eventName {
+  font-size: 22px;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsRight .eventLocation {
+  font-size: 12px;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsRight p {
+  color: #9B9B9B;
+  font-family: 'Quicksand', sans-serif;
 }
 
