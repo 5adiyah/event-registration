@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css"> --}}
     <link href="{{URL::asset('css/skeleton.css')}}" rel="stylesheet">
-    <link href="{{URL::asset('css/styles.css')}}" rel="stylesheet">
+    {{--<link href="{{URL::asset('css/app.css')}}" rel="stylesheet">--}}
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="{{URL::asset('css/stripe.css')}}" rel="stylesheet">
     <script src="https://js.stripe.com/v3/"></script>
     <script>window.stripeKey = '{{ config('services.stripe.key') }}';</script>
