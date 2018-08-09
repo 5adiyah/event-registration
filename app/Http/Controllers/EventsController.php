@@ -9,7 +9,7 @@ use App\Ticket;
 class EventsController extends Controller
 {
     public function home(){
-      return view('home');
+      return view('layouts.master');
     }
 
     public function index(){

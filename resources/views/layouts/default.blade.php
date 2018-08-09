@@ -13,6 +13,7 @@
     <header>
         <h1>{{ env('APP_TITLE') }}</h1>
     </header>
+
     @include('partials.alert')
     @yield('content')
 </div>
