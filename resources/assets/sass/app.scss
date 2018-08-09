@@ -8,5 +8,15 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// General Things
+@import "general";
+
 // Navigation
 @import "navigation";
+
+// Event Listing
+@import "eventslisting";
+
+.eventImg{
+  height: 100px;
+}

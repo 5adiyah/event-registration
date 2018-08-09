@@ -1,0 +1,30 @@
+.navigation{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+
+  .siteLogo{
+    width: 100px;
+  }
+  
+  ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+
+  ul li{
+    list-style: none;
+  }
+
+  ul a{
+    color: $dark-grey;
+    text-decoration: none;
+  }
+
+  ul a:hover {
+    color: $hover-dark-orange;
+  }
+
+}

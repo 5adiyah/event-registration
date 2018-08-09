@@ -25,6 +25,7 @@
         <a href="future-events"><li>FUTURE EVENTS</li></a>
       </ul>
     </div>
+
       @yield('content')
 
   </body>

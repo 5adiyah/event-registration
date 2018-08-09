@@ -9,10 +9,11 @@ use App\Ticket;
 class EventsController extends Controller
 {
     public function home(){
-      return view('layouts.master');
+      $events = Event::all();
+      return view('events', compact('events'));
     }
 
-    public function index(){
+    public function index(){ //might not need this
       $events = Event::all();
       return view('events', compact('events'));
     }

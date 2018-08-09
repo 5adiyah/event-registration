@@ -1,16 +1,26 @@
 @extends('layouts.master')
 
 @section('content')
-  <div class="flex-center full-height">
-    <div class="content">
-        <div class="title m-b-md">
-            View All Events
-        </div>
+    <div class="greenBackground">
+        <div class="content">
+            <hr>
+            @foreach ($events as $event)
+                <div class="eventContainer">
+                    <?php
+                    $date = strtotime($event->startDate);
+                    $day = date('j  ', $date);
+                    $month = date(' M ', $date);
+                    ?>
 
-        <div class="links">
-            <a href="past-events">Past Events</a>
-            <a href="current-events">Current Event</a>
-            <a href="future-events">Future Events</a>
+                    <img class="eventImg" src="/storage/{{ $event->imageUrl }}" alt="event image">
+                    <p class="eventDate"><?php echo $day; ?></p>
+                    <p class="eventDate"><?php echo $month; ?></p>
+                    <p class="eventName">{{ $event->title }}</p>
+                    <p class="eventName">{{ $event->location }}</p>
+                    <a href="/events/{{ $event->id }}"><button class="attendButton">Attend</button></a>
+                    <button class="detailsButton">Details</button>
+                </div>
+            @endforeach
         </div>
     </div>
-  </div>
+@endsection
