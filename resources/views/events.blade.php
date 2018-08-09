@@ -3,13 +3,12 @@
 @section('content')
     <div class="greenBackground">
         <div class="content">
-            <hr>
             @foreach ($events as $event)
                 <div class="eventContainer">
                     <?php
-                    $date = strtotime($event->startDate);
-                    $day = date('j  ', $date);
-                    $month = date(' M ', $date);
+                        $date = strtotime($event->startDate);
+                        $day = date('j  ', $date);
+                        $month = date(' M ', $date);
                     ?>
 
                     <img class="eventImg" src="/storage/{{ $event->imageUrl }}" alt="event image">
