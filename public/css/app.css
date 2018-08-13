@@ -1,4 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Abel|Advent+Pro|Antic|Dosis|Economica|Encode+Sans+Condensed|Exo|Lato|Marvel|Montserrat|Muli|Nanum+Gothic|Noto+Sans|Nunito+Sans|Open+Sans|Open+Sans+Condensed:300|Oswald|PT+Sans|Pathway+Gothic+One|Poppins|Quicksand|Rajdhani|Raleway|Roboto|Roboto+Condensed|Source+Sans+Pro|Titillium+Web|Ubuntu);/*!
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Abel|Advent+Pro|Antic|Dosis|Economica|Encode+Sans+Condensed|Exo|Lato|Marvel|Montserrat|Muli|Nanum+Gothic|Noto+Sans|Nunito+Sans|Open+Sans|Open+Sans+Condensed:300|Oswald|PT+Sans|Pathway+Gothic+One|Poppins|Quicksand|Rajdhani|Raleway|Roboto|Roboto+Condensed|Source+Sans+Pro|Titillium+Web|Ubuntu);/***
+ * Media queries
+ */
+
+/***
+ * px to rems - this is a safeguard since Bourbon is deprecating rems and ems.
+ */
+
+/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10474,13 +10482,19 @@ p {
 .greenBackground .eventContainer .eventImgContainer .eventImg {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 300px;
+  width: 100%;
   height: 108px;
 }
 
 .greenBackground .eventContainer .eventDetails {
   display: grid;
   grid-template-columns: 1fr 4fr;
+}
+
+@media (min-width: 31.25rem) {
+  .greenBackground .eventContainer .eventDetails {
+    display: block;
+  }
 }
 
 .greenBackground .eventContainer .eventDetails .detailsLeft {
@@ -10499,9 +10513,53 @@ p {
   font-family: 'Quicksand', sans-serif;
 }
 
+@media (min-width: 31.25rem) {
+  .greenBackground .eventContainer .eventDetails .detailsLeft {
+    display: none;
+  }
+}
+
 .greenBackground .eventContainer .eventDetails .detailsRight {
   padding-top: 10px;
   padding-left: 5px;
+}
+
+@media (min-width: 31.25rem) {
+  .greenBackground .eventContainer .eventDetails .detailsRight {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .greenBackground .eventContainer .eventDetails .detailsRight .nameAndLocation,
+  .greenBackground .eventContainer .eventDetails .detailsRight .buttons {
+    height: 100px;
+    padding-left: 10px;
+  }
+
+  .greenBackground .eventContainer .eventDetails .detailsRight .nameAndLocation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .greenBackground .eventContainer .eventDetails .detailsRight .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .greenBackground .eventContainer .eventDetails .detailsRight .eventName {

@@ -19,10 +19,14 @@
                             <p class="eventMonth"><?php echo $month; ?></p>
                         </div>
                         <div class="detailsRight">
-                            <p class="eventName">{{ $event->title }}</p>
-                            <p class="eventLocation">{{ $event->location }}</p>
-                            <a href="/events/{{ $event->id }}"><button class="attendButton">Attend</button></a>
-                            <button class="detailsButton">Details</button>
+                            <div class="nameAndLocation">
+                                <p class="eventName">{{ $event->title }}</p>
+                                <p class="eventLocation">{{ $event->location }}</p>
+                            </div>
+                            <div class="buttons">
+                                <a href="/events/{{ $event->id }}"><button class="attendButton">Attend</button></a>
+                                <button class="detailsButton">Details</button>
+                            </div>
                         </div>
                     </div>
                 </div>
