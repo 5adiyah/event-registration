@@ -40,7 +40,8 @@
       }
 
       .detailsRight{
-        padding-top: 20px;
+        padding-top: 10px;
+        padding-left: 5px;
         .eventName{
           font-size: 22px;
         }
@@ -52,6 +53,25 @@
         p {
           color: $medium-grey;
           font-family: 'Quicksand', sans-serif;
+        }
+
+        .attendButton, .detailsButton{
+          width: 100px;
+          padding: 0;
+          border: none;
+          border-radius: 10px;
+          font-weight: bold;
+          color: white;
+          margin-top: 5px;
+        }
+
+        .attendButton{
+          background-color: $bright-orange;
+        }
+
+        .detailsButton{
+          background-color: $dark-orange;
+          margin-left: 10px;
         }
       }
     }

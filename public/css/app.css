@@ -10500,7 +10500,8 @@ p {
 }
 
 .greenBackground .eventContainer .eventDetails .detailsRight {
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-left: 5px;
 }
 
 .greenBackground .eventContainer .eventDetails .detailsRight .eventName {
@@ -10514,5 +10515,25 @@ p {
 .greenBackground .eventContainer .eventDetails .detailsRight p {
   color: #9B9B9B;
   font-family: 'Quicksand', sans-serif;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsRight .attendButton,
+.greenBackground .eventContainer .eventDetails .detailsRight .detailsButton {
+  width: 100px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  margin-top: 5px;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsRight .attendButton {
+  background-color: #F2BE68;
+}
+
+.greenBackground .eventContainer .eventDetails .detailsRight .detailsButton {
+  background-color: #DFC8A9;
+  margin-left: 10px;
 }
 
